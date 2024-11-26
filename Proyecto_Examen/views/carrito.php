@@ -1,17 +1,22 @@
 <?php
+session_start();
 require_once '../controllers/CarritoController.php';
 
 $carritoController = new CarritoController();
 
 // Agregar productos al carrito
-$carritoController->agregarAlCarrito();
+if (isset($_POST['agregar'])) {
+    $carritoController->agregarAlCarrito();
+}
 
-// Limpiar carrito si se presiona el botón
+// Limpiar el carrito si se presiona el botón
 if (isset($_POST['limpiar'])) {
     $carritoController->limpiarCarrito();
 }
 
-// Recuperamos el carrito desde la cookie
+ 
+
+// Recuperamos el carrito desde la cookie (si existe)
 $carrito = isset($_COOKIE['carritoCookie']) ? json_decode($_COOKIE['carritoCookie'], true) : [];
 ?>
 
@@ -23,6 +28,18 @@ $carrito = isset($_COOKIE['carritoCookie']) ? json_decode($_COOKIE['carritoCooki
 </head>
 <body>
     <h1>Carrito de Compras</h1>
+
+    <form method="POST" action="../index.php">
+        <button name="volverIndice">Volver a Menú</button>
+    </form>
+    
+    <!-- Formulario de cierre de sesión -->
+    <form method="POST" action="logout.php">
+    <form method="POST">
+        <button name="limpiar">Cerrar Sesión</button>
+    </form>
+    </form>
+
 
     <h2>Productos Disponibles</h2>
     <form method="POST">
@@ -57,7 +74,7 @@ $carrito = isset($_COOKIE['carritoCookie']) ? json_decode($_COOKIE['carritoCooki
 
     <h2>Resumen del Carrito</h2>
     <?php if (count($carrito) > 0): ?>
-        <table  >
+        <table>
             <thead>
                 <tr>
                     <th>Producto</th>
@@ -79,7 +96,6 @@ $carrito = isset($_COOKIE['carritoCookie']) ? json_decode($_COOKIE['carritoCooki
                         <td>&nbsp; <?= $item['precio'] ?> €</td>
                         <td>&nbsp; <?= $productoTotal ?> €</td>
                     </tr>
-
                 <?php endforeach; ?>
             </tbody>
         </table>

@@ -3,3 +3,5 @@ hadriel|$2y$10$sfpLxb4/bAnKe.QnpUxvt.Ja2A01WPu2yLM/8IhPB8uuXCB.h.VxS|user
 |$2y$10$9Zx/VAQavcgVsTet2YjiL.Nu4eGpzzm./H6VY9obfv4/oXyQIY7eS|user
 Mone|$2y$10$VN2wrQT3RwK7upLuvrr2XesL11jiZaf0YD4ZSOJvt.eY39kM37mUe|user
 gianlombardo|$2y$10$8Pb7nn.4mc5CRakMZQHkNeLa209rWrkesI/UhNIbz8XcY0ajtmiQ.|admin
+gianfranco|$2y$10$/TSr1rDR0S/MrFsP2yYEieNynD/7GZuTK2gkSL2sX2VEmFIFlwGFa|user
+juan|$2y$10$IgDnvJPbjNCFOiHTtF6W3OqrCAt5Yh/duD0kKuTdmw5bjmbJxsP/G|admin

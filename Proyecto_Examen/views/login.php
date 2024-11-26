@@ -2,6 +2,18 @@
 // Iniciar sesión
 session_start();
 
+// Verificar si ya hay una sesión iniciada
+if (isset($_SESSION['username'])) {
+    // Si el usuario es admin, redirigir al panel de administración
+    if ($_SESSION['role'] == 'admin') {
+        header("Location: admin.php"); // Cambia 'admin.php' por el nombre real de la página de administración
+        exit(); // Salir para evitar que el código posterior se ejecute
+    }
+    // Si el usuario no es admin, redirigir al carrito
+    header("Location: carrito.php");
+    exit(); // Salir para evitar que el código posterior se ejecute
+}
+
 // Definir el mensaje de bienvenida si es necesario
 $welcomeMessage = '';
 
@@ -85,7 +97,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language']) && isset(
     $language = $_POST['language'];
     $style = $_POST['style'];
 }
-
 ?>
 
 <!DOCTYPE html>
