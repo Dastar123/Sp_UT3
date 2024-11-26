@@ -35,10 +35,9 @@ $carrito = isset($_COOKIE['carritoCookie']) ? json_decode($_COOKIE['carritoCooki
     
     <!-- Formulario de cierre de sesión -->
     <form method="POST" action="logout.php">
-    <form method="POST">
-        <button name="limpiar">Cerrar Sesión</button>
+    <button type="submit" name="limpiar">Cerrar Sesión</button>
     </form>
-    </form>
+
 
 
     <h2>Productos Disponibles</h2>
