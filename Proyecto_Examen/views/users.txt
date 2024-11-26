@@ -1,0 +1,5 @@
+hadriele|$2y$10$yT.Je33YRxAy8kWq8clrX.RGLxrsUzITJSqPzp3mrnzWWjgcE3dKi|user
+hadriel|$2y$10$sfpLxb4/bAnKe.QnpUxvt.Ja2A01WPu2yLM/8IhPB8uuXCB.h.VxS|user
+|$2y$10$9Zx/VAQavcgVsTet2YjiL.Nu4eGpzzm./H6VY9obfv4/oXyQIY7eS|user
+Mone|$2y$10$VN2wrQT3RwK7upLuvrr2XesL11jiZaf0YD4ZSOJvt.eY39kM37mUe|user
+gianlombardo|$2y$10$8Pb7nn.4mc5CRakMZQHkNeLa209rWrkesI/UhNIbz8XcY0ajtmiQ.|admin
